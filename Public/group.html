@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Profiles</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+
+    <style>
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: rgba(44, 62, 80, 0.8); /* Semi-transparent */
+    color: #ecf0f1;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.profiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.profile {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    text-align: center;
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.profile::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(52, 152, 219, 0.2), transparent 70%);
+    z-index: 0;
+    transform: rotate(30deg);
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 5px solid rgba(52, 152, 219, 0.3); /* Stylish border */
+    transition: border 0.3s ease;
+}
+
+.profile:hover .profile-img {
+    border-color: rgba(52, 152, 219, 0.6);
+}
+
+/* Profile Information */
+.profile-info h2 {
+    margin: 0;
+    font-size: 1.8em;
+    color: #34495e;
+    z-index: 1;
+    position: relative;
+}
+
+.profile-info p {
+    margin: 10px 0;
+    font-size: 1em;
+    color: #7f8c8d;
+    line-height: 1.5;
+    z-index: 1;
+    position: relative;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+    </style>
+
+    <header>
+        <h1>Meet Our Team</h1>
+    </header>
+
+    <main class="profiles">
+        <section class="profile">
+            <img src="Zweli.jpg" alt="Zweli Ngwenya" class="profile-img">
+            <div class="profile-info">
+                <h2>Zweli Ngwenya</h2>
+                <p>University of Johannesburg Public Management and Governance Graduate (PMG)</p>
+                <p>Zweli Ngwenya is a 2024 graduate who embarked on a transformative journey in a work readiness program, specializing in both front and back-end programming.</p>
+            </div>
+        </section>
+
+        <section class="profile">
+            <img src="Mbali_Graduation.jpeg" alt="Mbali Maduna" class="profile-img">
+            <div class="profile-info">
+                <h2>Mbali Maduna</h2>
+                <p>University of Johannesburg Political Sciences Graduate</p>
+                <p>Mbali Maduna, also a 2024 graduate, joined a work readiness program focusing on front and back-end programming, marking a remarkable journey in the tech field.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Group Profiles. All rights reserved.</p>
+    </footer>
+</body>
+</html>
